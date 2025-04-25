@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    <link rel="stylesheet" href="producto_stock.css">
+</head>
+<body>
+    <header>
+        <h1>Punto Elegante</h1>
+        <nav>
+            <ul>
+                <li><a href="#catalog">Catálogo</a></li>
+                <li><a href="#cart">Carrito</a></li>
+                <li><a href="#admin-panel">Panel de Administración</a></li>
+                <li><a href="#login">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="catalogo">
+        <h2>Producto del Catálogo</h2>
+        <div class="producto">
+            <img src="image.png" alt="Imagen del Producto">
+            <h3>Pantalón y chaqueta</h3>
+            <p>Descripción del producto.</p>
+            <p>Tallas: S, M, L</p>
+            <p>Colores: rojo, azul, verde</p>
+            <p>Precio: s/99</p>
+            <p>Stock: 20</p>
+            <button>Comprar</button>
+        </div>
+        <!-- Repetir para más productos -->
+    </section>
+
+    <section id="filters">
+        <h2>Filtrar y Buscar</h2>
+        <form>
+            <label for="category">Categoría:</label>
+            <select id="category">
+                <option value="men">Hombres</option>
+                <option value="women">Mujeres</option>
+                <option value="kids">Niños</option>
+            </select>
+            <label for="size">Talla:</label>
+            <select id="size">
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+            </select>
+            <label for="color">Color:</label>
+            <input type="text" id="color">
+            <label for="price">Precio:</label>
+            <input type="number" id="price" placeholder="Precio Máximo">
+            <button type="submit">Buscar</button>
+        </form>
+    </section>
+
+    <section id="cart">
+        <h2>Carrito de Compras</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los elementos del carrito se agregarán dinámicamente aquí -->
+            </tbody>
+        </table>
+        <p>Total: $0</p>
+        <button>Finalizar Compra</button>
+    </section>
+
+    <section id="admin-panel">
+        <h2>Panel de Administración</h2>
+        <button>Agregar Producto</button>
+        <button>Editar Producto</button>
+        <button>Eliminar Producto</button>
+        <button>Ver Ventas</button>
+        <button>Gestionar Inventario</button>
+    </section>
+
+    <section id="extras">
+        <h2>Características Adicionales</h2>
+        <ul>
+            <li>Reseñas y Calificaciones</li>
+            <li>Ofertas y Descuentos</li>
+            <li>Lista de Deseos / Favoritos</li>
+            <li>Inicio de Sesión y Perfiles de Usuario</li>
+            <li>Chat de Soporte al Cliente</li>
+            <li>Nuevas Llegadas / Más Vendidos</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tienda en Línea. Punto Elegante.</p>
+    </footer>
+</body>
+</html>
