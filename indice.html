@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Punto Elegante</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sección de Contacto -->
+  <section id="contacto">
+    <div class="contact-container">
+
+      <!-- Texto e información -->
+      <div class="contact-text">
+        <h1 class="store-name">Punto Elegante</h1>
+        <div class="title-container">
+          <h2>Contáctanos <span class="emoji">👋</span></h2>
+          <div class="decorative-line"></div>
+        </div>
+        <p class="subtitle">Estamos aquí para ayudarte. Escríbenos o visítanos.</p>
+        
+        <div class="contact-info">
+          <p><strong><i class="fas fa-map-marker-alt"></i> Dirección:</strong> JR. HERMILIO VALDIZAN 123, HUÁNUCO, PERÚ</p>
+          <p><strong><i class="fas fa-phone"></i> Teléfono:</strong> 984 257 425</p>
+          <p><strong><i class="fas fa-envelope"></i> Correo:</strong> contacto@puntoelegante.com</p>
+          <p><strong><i class="fas fa-clock"></i> Horario:</strong> Lunes a Viernes: 9:00 am - 6:00 pm<br>Sábados: 10:00 am - 2:00 pm</p>
+        </div>
+
+        <!-- Mapa -->
+        <div class="map-container">
+          <iframe src="https://maps.google.com/maps?q=JR.HERMILIO%20VALDIZAN%20123,%20HUÁNUCO,%20PERÚ&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                  loading="lazy"></iframe>
+        </div>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/51984257425" class="whatsapp-btn">
+          <i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp
+        </a>
+
+        <!-- Redes sociales -->
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <!-- Formulario de contacto -->
+      <div class="contact-form">
+        <form id="contactForm" method="POST">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+          
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+          
+          <label for="telefono">Teléfono (opcional)</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="987 654 321">
+          
+          <label for="asunto">Asunto</label>
+          <select id="asunto" name="asunto">
+            <option value="consulta">Consulta general</option>
+            <option value="pedido">Seguimiento de pedido</option>
+            <option value="devolucion">Devolución o reclamo</option>
+            <option value="soporte">Soporte técnico</option>
+          </select>
+          
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+          
+          <button type="submit">Enviar Mensaje</button>
+        </form>
+        <div id="form-message"></div>
+      </div>
+    </div>
+
+    <!-- Preguntas frecuentes -->
+    <div class="faq">
+      <h3>Preguntas frecuentes</h3>
+      <details>
+        <summary>¿Cuánto tardan en responder?</summary>
+        <p>Normalmente respondemos en menos de 24 horas hábiles.</p>
+      </details>
+      <details>
+        <summary>¿Hacen envíos a todo el país?</summary>
+        <p>Sí, realizamos envíos a todas las regiones del Perú con diferentes opciones de transporte.</p>
+      </details>
+      <details>
+        <summary>¿Qué métodos de pago aceptan?</summary>
+        <p>Aceptamos transferencias bancarias, PayPal, Yape, Plin y tarjetas de crédito/débito.</p>
+      </details>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const message = document.getElementById('form-message');
+      message.style.display = 'block';
+      message.textContent = '¡Gracias por tu mensaje! Te responderemos pronto.';
+      message.className = 'success';
+      this.reset();
+      
+      setTimeout(() => {
+        message.style.display = 'none';
+      }, 5000);
+    });
+
+    document.getElementById('email').addEventListener('blur', function() {
+      if(!this.value.includes('@') && this.value !== '') {
+        this.style.borderColor = '#e53e3e';
+      } else {
+        this.style.borderColor = '#cbd5e0';
+      }
+    });
+  </script>
+</body>
+</html>
+  
