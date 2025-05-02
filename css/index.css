@@ -196,4 +196,51 @@ body{
     }
   }
 
- 
+ /* ==================== */
+/* CTA Section */
+/* ==================== */
+.cta {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: 10px;
+}
+
+.cta p {
+  font-size: var(--font-size-n);
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  padding: 12px 28px;
+  font-size: var(--font-size-n);
+  border-radius: var(--border-radius-m);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+
+/* ==================== */
+/* Footer */
+/* ==================== */
+.footer {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  padding: 20px 0;
+  text-align: center;
+  font-size: var(--font-size-s);
+  margin-top: 40px;
+}
